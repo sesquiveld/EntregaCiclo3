@@ -39,7 +39,7 @@ function pintarReportes(items){
 
 function traerReservas(){
     $.ajax({
-        url:'http://150.136.86.43:8080/api/Reservation/report-dates_total/',
+        url:'http://150.136.86.43:8080/api/Reservation/report-status/',
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
