@@ -2,7 +2,7 @@
 
 function getCars(){
     $.ajax({
-        url:'http://150.136.86.43/api/Car/all',
+        url:'http://150.136.86.43:8080/api/Car/all',
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -70,7 +70,7 @@ function saveCar(){
     console.log(data);
     console.log(dataToSend);
     $.ajax({
-        url:'http://150.136.86.43/api/Car/save',
+        url:'http://150.136.86.43:8080/api/Car/save',
         type : 'POST',
         contentType : 'application/json',
         data:dataToSend,
@@ -93,7 +93,7 @@ function updateCar(){
     console.log(dataToSend);
 
     $.ajax({
-        url:'http://150.136.86.43/api/Car/update',
+        url:'http://150.136.86.43:8080/api/Car/update',
         type : 'PUT',
         contentType : 'application/json',
         data:dataToSend,
@@ -111,7 +111,7 @@ function updateCar(){
 function getDetailCar(idCar){
 
     $.ajax({
-        url : 'http://150.136.86.43/api/Car/'+idCar,
+        url : 'http://150.136.86.43:8080/api/Car/'+idCar,
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -134,7 +134,7 @@ function deleteCar(idCar){
     let data={id:idCar};
     let dataToSend=JSON.stringify(data);
     $.ajax({
-        url:'http://150.136.86.43/api/Car/'+idCar,
+        url:'http://150.136.86.43:8080/api/Car/'+idCar,
         type : 'DELETE',
         contentType : 'application/json',
         data:dataToSend,

@@ -1,7 +1,7 @@
 
 function getScores(){
     $.ajax({
-        url:'http://150.136.86.43/api/Score/all',
+        url:'http://150.136.86.43:8080/api/Score/all',
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -37,7 +37,7 @@ function guardarScore(items){
     console.log(data);
     console.log(dataToSend);
     $.ajax({
-        url:'http://150.136.86.43/api/Score/save',
+        url:'http://150.136.86.43:8080/api/Score/save',
         type : 'POST',
         contentType : 'application/json',
         data:dataToSend,
@@ -82,7 +82,7 @@ function updateScore(){
     console.log(dataToSend);
 
     $.ajax({
-        url:'http://150.136.86.43/api/Score/update',
+        url:'http://150.136.86.43:8080/api/Score/update',
         type : 'PUT',
         contentType : 'application/json',
         data:dataToSend,
@@ -99,7 +99,7 @@ function updateScore(){
 
 function getDetailScore(idScore){
     $.ajax({
-        url : 'http://150.136.86.43/api/Score/'+idScore,
+        url : 'http://150.136.86.43:8080/api/Score/'+idScore,
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -120,7 +120,7 @@ function getDetailScore(idScore){
 
 function getDetailScoreR(idReservation){
     $.ajax({
-        url : 'http://150.136.86.43/api/Reservation/'+idReservation,
+        url : 'http://150.136.86.43:8080/api/Reservation/'+idReservation,
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -138,7 +138,7 @@ function deleteScore(idScore){
     let data={id:idScore};
     let dataToSend=JSON.stringify(data);
     $.ajax({
-        url:'http://150.136.86.43/api/Score/'+idScore,
+        url:'http://150.136.86.43:8080/api/Score/'+idScore,
         type : 'DELETE',
         contentType : 'application/json',
         data:dataToSend,
@@ -157,7 +157,7 @@ function deleteScore(idScore){
 function infoReservation(){
 
     $.ajax({
-        url : 'http://150.136.86.43/api/Reservation/all',
+        url : 'http://150.136.86.43:8080/api/Reservation/all',
         type : 'GET',
         dataType : 'json',
         success : function(respuesta) {
@@ -227,7 +227,7 @@ function guardarReservation(){
     console.log(data);
     console.log(dataToSend);
     $.ajax({
-        url : 'http://150.136.86.43/api/Reservation/save',
+        url : 'http://150.136.86.43:8080/api/Reservation/save',
         type : 'POST',
         contentType : 'application/json',
         data:dataToSend,
@@ -246,7 +246,7 @@ function borrarReservation(idReservation){
     let data={id:idReservation};
     let dataToSend=JSON.stringify(data);
     $.ajax({
-        url : 'http://150.136.86.43/api/Reservation/'+idReservation,
+        url : 'http://150.136.86.43:8080/api/Reservation/'+idReservation,
         type : 'DELETE',
         contentType : 'application/json',
         data:dataToSend,
@@ -266,7 +266,7 @@ function editarReservation(){
     console.log(data);
     console.log(dataToSend);
     $.ajax({
-        url : 'http://150.136.86.43/api/Reservation/update',
+        url : 'http://150.136.86.43:8080/api/Reservation/update',
         type : 'PUT',
         contentType : 'application/json',
         data:dataToSend,
@@ -282,7 +282,7 @@ function editarReservation(){
 }
 function getDetailReservation(idReservation) {
     $.ajax({
-        url: 'http://150.136.86.43/api/Reservation/'+idReservation,
+        url: 'http://150.136.86.43:8080/api/Reservation/'+idReservation,
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {

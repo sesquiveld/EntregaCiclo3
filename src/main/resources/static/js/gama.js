@@ -1,7 +1,7 @@
 //             *************************  GAMA
 function getGama() {
     $.ajax({
-        url: 'http://150.136.86.43/api/Gama/all',
+        url: 'http://150.136.86.43:8080/api/Gama/all',
         type : 'GET',
         dataType : 'json',
         success : function(gamas) {
@@ -57,7 +57,7 @@ function guardarGama(){
     console.log(data);
     console.log(dataToSend);
     $.ajax({
-        url:'http://150.136.86.43/api/Gama/save',
+        url:'http://150.136.86.43:8080/api/Gama/save',
         type : 'POST',
         contentType : 'application/json',
         data:dataToSend,
@@ -80,7 +80,7 @@ function editarGama(){
     console.log(dataToSend);
 
     $.ajax({
-        url:'http://150.136.86.43/api/Gama/update',
+        url:'http://150.136.86.43:8080/api/Gama/update',
         type : 'PUT',
         contentType : 'application/json',
         data:dataToSend,
@@ -98,7 +98,7 @@ function getDetailGama(idGama){
     console.log(idGama);
 
     $.ajax({
-        url : 'http://150.136.86.43/api/Gama/'+idGama,
+        url : 'http://150.136.86.43:8080/api/Gama/'+idGama,
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -118,7 +118,7 @@ function borrarGama(idGama){
     let data={id:idGama};
     let dataToSend=JSON.stringify(data);
     $.ajax({
-        url:'http://150.136.86.43/api/Gama/'+idGama,
+        url:'http://150.136.86.43:8080/api/Gama/'+idGama,
         type : 'DELETE',
         contentType : 'application/json',
         data:dataToSend,

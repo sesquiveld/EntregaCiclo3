@@ -3,7 +3,7 @@
 
 function infoMsg(){
     $.ajax({
-        url:'http://150.136.86.43/api/Message/all',
+        url:'http://150.136.86.43:8080/api/Message/all',
         type : 'GET',
         dataType : 'json',
         success : function(message) {
@@ -64,7 +64,7 @@ function guardarMsg(){
     console.log(data);
     console.log(dataToSend);
     $.ajax({
-        url : 'http://150.136.86.43/api/Message/save',
+        url : 'http://150.136.86.43:8080/api/Message/save',
         type : 'POST',
         contentType : 'application/json',
         data:dataToSend,
@@ -88,7 +88,7 @@ function editarMsg(){
     console.log(dataToSend);
 
     $.ajax({
-        url:'http://150.136.86.43/api/Message/update',
+        url:'http://150.136.86.43:8080/api/Message/update',
         type : 'PUT',
         contentType : 'application/json',
         data:dataToSend,
@@ -106,7 +106,7 @@ function editarMsg(){
 function getDetailMsg(idMessage) {
 
     $.ajax({
-        url: 'http://150.136.86.43/api/Message/'+idMessage,
+        url: 'http://150.136.86.43:8080/api/Message/'+idMessage,
         type: 'GET',
         dataType: 'json',
         success: function (Message) {
@@ -128,7 +128,7 @@ function borrarMsg(idMessage){
     let data={id:idMessage};
     let dataToSend=JSON.stringify(data);
     $.ajax({
-        url:'http://150.136.86.43/api/Message/'+idMessage,
+        url:'http://150.136.86.43:8080/api/Message/'+idMessage,
         type : 'DELETE',
         contentType : 'application/json',
         data:dataToSend,

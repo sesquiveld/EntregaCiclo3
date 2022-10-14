@@ -2,7 +2,7 @@
 //          ************************************CLIENT
 function infoClient(){
     $.ajax({
-        url:'http://150.136.86.43/api/Client/all',
+        url:'http://150.136.86.43:8080/api/Client/all',
         type:"GET",
         datatype:"JSON",
         success : function(respuesta) {
@@ -67,7 +67,7 @@ function guardarClient(){
     console.log(dataToSend);
 
     $.ajax({
-        url : 'http://150.136.86.43/api/Client/save',
+        url : 'http://150.136.86.43:8080/api/Client/save',
         type : 'POST',
         contentType : 'application/json',
         data:dataToSend,
@@ -90,7 +90,7 @@ function editarClient(){
     console.log(dataToSend);
 
     $.ajax({
-        url : 'http://150.136.86.43/api/Client/update',
+        url : 'http://150.136.86.43:8080/api/Client/update',
         type : 'PUT',
         contentType : 'application/json',
         data:dataToSend,
@@ -107,7 +107,7 @@ function editarClient(){
 function getDetailClient(idClient){
 
     $.ajax({
-        url : 'http://150.136.86.43/api/Client/'+idClient,
+        url : 'http://150.136.86.43:8080/api/Client/'+idClient,
         type : 'GET',
         dataType : 'json',
         success : function(Client) {
@@ -130,7 +130,7 @@ function borrarClient(idClient){
      let data={idClient:idClient};
      let dataToSend=JSON.stringify(data);
     $.ajax({
-        url : 'http://150.136.86.43/api/Client/'+idClient,
+        url : 'http://150.136.86.43:8080/api/Client/'+idClient,
         type : 'DELETE',
         contentType : 'application/json',
         data:dataToSend,

@@ -3,7 +3,7 @@ function traerReporte(){
     let fechaInicio = document.getElementById("startDate").value;
     let fechaFin= document.getElementById("devolutionDate").value;
     $.ajax({
-        url:'http://150.136.86.43/api/Reservation/report-dates/'+fechaInicio+"/"+fechaFin,
+        url:'http://150.136.86.43:8080/api/Reservation/report-dates/'+fechaInicio+"/"+fechaFin,
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -39,7 +39,7 @@ function pintarReportes(items){
 
 function traerReservas(){
     $.ajax({
-        url:'http://150.136.86.43/api/Reservation/report-dates_total/',
+        url:'http://150.136.86.43:8080/api/Reservation/report-dates_total/',
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -67,7 +67,7 @@ function pintarReservas(items){
 
 function topClients(){
     $.ajax({
-        url:'http://150.136.86.43/api/Reservation/report-clients/',
+        url:'http://150.136.86.43:8080/api/Reservation/report-clients/',
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {

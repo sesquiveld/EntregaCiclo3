@@ -1,7 +1,7 @@
 //             *************************  GAMA
 function getAdmin() {
     $.ajax({
-        url: 'http://150.136.86.43/api/Admin/all',
+        url: 'http://150.136.86.43:8080/api/Admin/all',
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -61,7 +61,7 @@ function guardarAdmin(){
     console.log(data);
     console.log(dataToSend);
     $.ajax({
-        url:'http://150.136.86.43/api/Admin/save',
+        url:'http://150.136.86.43:8080/api/Admin/save',
         type : 'POST',
         contentType : 'application/json',
         data:dataToSend,
@@ -84,7 +84,7 @@ function editarAdmin(){
     console.log(dataToSend);
 
     $.ajax({
-        url:'http://150.136.86.43/api/Admin/update',
+        url:'http://150.136.86.43:8080/api/Admin/update',
         type : 'PUT',
         contentType : 'application/json',
         data:dataToSend,
@@ -102,7 +102,7 @@ function getDetailAdmin(idAdmin){
     console.log(idAdmin);
 
     $.ajax({
-        url : 'http://150.136.86.43/api/Admin/'+idAdmin,
+        url : 'http://150.136.86.43:8080/api/Admin/'+idAdmin,
         type : 'GET',
         dataType : 'json',
         success : function(resultado) {
@@ -123,7 +123,7 @@ function borrarAdmin(idAdmin){
     let data={id:idAdmin};
     let dataToSend=JSON.stringify(data);
     $.ajax({
-        url:'http://150.136.86.43/api/Admin/'+idAdmin,
+        url:'http://150.136.86.43:8080/api/Admin/'+idAdmin,
         type : 'DELETE',
         contentType : 'application/json',
         data:dataToSend,
