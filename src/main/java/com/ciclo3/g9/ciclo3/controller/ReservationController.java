@@ -59,7 +59,7 @@ public class ReservationController {
         return reservationService.getReservationsBetweenDates(ini,fin);
     }
 
-    @GetMapping("/report-dates_total")
+    @GetMapping("/report-status")
     public CountStatus getReportStatus(){
         return reservationService.getReservationsStatus();
     }
